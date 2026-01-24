@@ -1,0 +1,37 @@
+<header class="w-full">
+    <div class="max-w-7x1 mx-auto px-8 py-8">
+
+        <div class="grid grid-cols-3 items-center">
+
+            <div class="flex items-center">
+                <a routerLink="/" class="flex items-center gap-2 cursor-pointer">
+                    <img src="assets/images/logo-teste.png" alt="EP Logo" class="h-20 w-auto">
+                </a>
+            </div>
+
+            <div class="text-center">
+                <span class="text-sm md:text-base font-medium tracking-wide uppercase">
+                    <b>Criado </b> <i>por</i> <b> Alcance Jovem</b>
+                </span>
+            </div>
+
+            <nav class="flex justify-end">
+                <ul class="flex flex-row gap-6 tracking-wide uppercase font-semibold">
+                    @for (item of menuItems; track item; let last = $last) {
+                        <li>
+                            <a class="cursor-pointer hover:text-brand-primary transition">
+                                {{ item }}
+                            </a>
+                        </li>
+                        
+                        @if (!last) {
+                            <li class="px-2">•</li>
+                        }
+                    }
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+</header>
