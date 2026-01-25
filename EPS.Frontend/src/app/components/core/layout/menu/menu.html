@@ -1,34 +1,65 @@
 <header class="w-full">
-    <div class="max-w-7x1 mx-auto px-8 py-8">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
-        <div class="grid grid-cols-3 items-center">
+        <div class="grid grid-cols-2 md:grid-cols-3 items-center gap-4">
 
             <div class="flex items-center">
                 <a routerLink="/" class="flex items-center gap-2 cursor-pointer">
-                    <img src="assets/images/logo-teste.png" alt="EP Logo" class="h-20 w-auto">
+                    <img src="assets/images/logo-teste.png" alt="EP Logo" class="h-14 sm:h-16 lg:h-20 w-auto">
                 </a>
             </div>
 
-            <div class="text-center">
-                <span class="text-sm md:text-base font-medium tracking-wide uppercase">
+            <div class="hidden md:block text-center">
+                <span class="text-xs sm:text-sm md:text-base font-medium tracking-wide uppercase">
                     <b>Criado </b> <i>por</i> <b> Alcance Jovem</b>
                 </span>
             </div>
 
-            <nav class="flex justify-end">
-                <ul class="flex flex-row gap-6 tracking-wide uppercase font-semibold">
+            <nav class="flex justify-end items-center">
+                <ul class="hidden md:flex flex-row gap-6 tracking-wide uppercase font-semibold">
                     @for (item of menuItems; track item; let last = $last) {
                         <li>
-                            <a class="cursor-pointer hover:text-brand-primary transition">
+                            <a class="cursor-pointer hover:text-brand-primary transition whitespace-nowrap">
                                 {{ item }}
                             </a>
                         </li>
                         
                         @if (!last) {
-                            <li class="px-2">•</li>
+                            <li class="hidden sm:block px-2">•</li>
                         }
                     }
                 </ul>
+
+                @if (!isMenuOpen) {
+                    <button class="md:hidden flex items-center justify-center w-12 h-12 rounded-full"
+                        (click)="toggleMenu()">
+                        <mat-icon class="text-3xl leading-none">menu</mat-icon>
+                    </button>
+                }
+                
+
+                @if (isMenuOpen) {
+                    <div class="md:hidden fixed top-7 right-3 z-50 
+                            bg-black/85 rounded-lg p-4 shadow-lg w-56
+                            animate-in fade-in duration-300">
+
+                        <div class="flex justify-end">
+                            <button (click)="isMenuOpen = false">
+                                <mat-icon>close</mat-icon>
+                            </button>
+                        </div>
+
+                        <ul class="flex flex-col gap-4 text-center uppercase font-semibold">
+                        @for (item of menuItems; track item) {
+                            <li>
+                            <a class="cursor-pointer hover:text-brand-primary transition">
+                                {{ item }}
+                            </a>
+                            </li>
+                        }
+                        </ul>
+                    </div>
+                }
             </nav>
 
         </div>
