@@ -1,0 +1,28 @@
+<div class="border-b border-white w-[80vw] md:w-[55vw] py-4">
+
+  <button class="w-full flex justify-between items-center text-left gap-4"
+        (click)="toggle()">
+
+    <h2 class="border-r text-brand-primary pr-6 text-[clamp(1rem,2.5vw,2rem)]">{{formatNumber(number)}}</h2>
+    <span class="text-[clamp(0.8rem,2vw,1.2rem)]">{{ question }}</span>
+
+    <div class="border rounded-full w-6 h-6 md:w-9 md:h-9 flex items-center justify-center">
+        <span class="material-symbols-outlined text-[clamp(0.8rem,2vw,1.2rem)] transform transition-transform duration-300"
+            [class.rotate-180]="isCardOpen">
+            arrow_downward
+        </span>
+    </div>
+  </button>
+
+  <!-- Resposta -->
+  <div
+    class="overflow-hidden transition-all duration-300"
+    [class.max-h-0]="!isCardOpen"
+    [class.max-h-40]="isCardOpen"
+  >
+    <p class="mt-4 text-[clamp(0.8rem,2vw,1.2rem)]">
+      {{ answer }}
+    </p>
+  </div>
+
+</div>

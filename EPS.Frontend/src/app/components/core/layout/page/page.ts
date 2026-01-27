@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Menu } from '../menu/menu';
-import { Epfind } from '../../../features/epfind/epfind';
+import { EpFind } from '../../../features/ep-find/ep-find';
+import { Faq } from '../../../features/faq/faq';
 
 @Component({
   selector: 'app-page',
   imports: [
     CommonModule,
     Menu,
-    Epfind
+    EpFind,
+    Faq
   ],
   templateUrl: './page.html',
   styleUrl: './page.css',
