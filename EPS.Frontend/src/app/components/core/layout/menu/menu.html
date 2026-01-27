@@ -1,7 +1,7 @@
 <header class="w-full">
     <div class="mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
-        <div class="grid grid-cols-2 md:grid-cols-3 items-center gap-4">
+        <div class="grid grid-cols-2 lg:grid-cols-[auto_1fr_auto] items-center gap-4">
 
             <div class="flex items-center">
                 <a routerLink="/" class="flex items-center gap-2 cursor-pointer">
@@ -9,7 +9,7 @@
                 </a>
             </div>
 
-            <div class="hidden md:block text-center">
+            <div class="hidden lg:block text-center">
                 <span class="text-xs sm:text-sm md:text-base font-medium tracking-wide uppercase">
                     <b>Criado </b> <i>por</i> <b> Alcance Jovem</b>
                 </span>
@@ -19,8 +19,9 @@
                 <ul class="hidden md:flex flex-row gap-6 tracking-wide uppercase font-semibold">
                     @for (item of menuItems; track item; let last = $last) {
                         <li>
-                            <a class="cursor-pointer hover:text-brand-primary transition whitespace-nowrap">
-                                {{ item }}
+                            <a class="cursor-pointer hover:text-brand-primary transition whitespace-nowrap"
+                                (click)="item.ref && scrollTo(item.ref)">
+                                {{ item.label }}
                             </a>
                         </li>
                         
@@ -52,8 +53,9 @@
                         <ul class="flex flex-col gap-4 text-center uppercase font-semibold">
                         @for (item of menuItems; track item) {
                             <li>
-                            <a class="cursor-pointer hover:text-brand-primary transition">
-                                {{ item }}
+                            <a class="cursor-pointer hover:text-brand-primary transition"
+                                (click)="isMenuOpen = false" (click)="item.ref && scrollTo(item.ref)">
+                                {{ item.label }}
                             </a>
                             </li>
                         }

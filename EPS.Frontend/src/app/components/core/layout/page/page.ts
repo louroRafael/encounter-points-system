@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Menu } from '../menu/menu';
+import { Epfind } from '../../../features/epfind/epfind';
 
 @Component({
   selector: 'app-page',
   imports: [
     CommonModule,
-    Menu
+    Menu,
+    Epfind
   ],
   templateUrl: './page.html',
   styleUrl: './page.css',
 })
-export class Page {
+export class Page implements OnInit {
   activeBg: string = 'futebol';
 
   epCategories = [
@@ -19,11 +21,21 @@ export class Page {
     { label: 'Boardgame', key: 'boardgame' },
     { label: 'Escalada', key: 'escalada' },
     { label: 'Bike', key: 'bike' },
+    { label: 'Skate', key: 'skate' },
+    { label: 'E-Sports', key: 'esports'},
+    { label: 'Videogame', key: 'videogame'},
     { label: 'Corrida', key: 'corrida'},
     { label: 'Trilha', key: 'trilha'}
   ];
 
+  ngOnInit() {
+    this.epCategories.forEach(category => {
+      const img = new Image();
+      img.src = `/assets/images/bg-${category.key}.jpg`;
+    });
+  }
+
   getBackground(): string {
-    return `url(/assets/images/bg-${this.activeBg}.jpg)`;
+    return `url(assets/images/bg-${this.activeBg}.jpg)`;
   }
 }

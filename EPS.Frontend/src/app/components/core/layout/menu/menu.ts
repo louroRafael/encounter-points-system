@@ -13,9 +13,20 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class Menu {
   isMenuOpen = false;
-  menuItems = ['Home', 'O que é', 'Encontre o seu', 'FAQ', 'Contato'];
+  menuItems = [
+    { label: 'Home', ref: 'home' },
+    { label: 'O que é', ref: 'about' },
+    { label: 'Encontre o seu', ref: 'ep-find' },
+    { label: 'FAQ', ref: 'faq' },
+    { label: 'Contato', ref: 'contact' }
+  ];
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  scrollTo(ref: string) {
+    const el = document.getElementById(ref);
+    el?.scrollIntoView({ behavior: 'smooth' });
   }
 }

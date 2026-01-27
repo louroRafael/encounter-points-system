@@ -1,5 +1,5 @@
 <section
-  class="relative min-h-screen bg-cover bg-center transition-all duration-700 ease-in-out"
+  class="relative h-[clamp(15rem,100vw,100vh)] bg-cover bg-center transition-all duration-700 ease-in-out"
   [style.backgroundImage]="getBackground()"
 >
 
@@ -17,7 +17,7 @@
 
         <ul class="text-brand-primary 
                     px-4 sm:px-6 lg:px-10
-                    text-[64px] sm:text-[100px] lg:text-[200px]
+                    text-[clamp(3rem,15vw,18rem)]
                     font-semibold tracking-tighter leading-[0.8] uppercase"
         >
             @for (category of epCategories; track category.key) {
@@ -30,5 +30,6 @@
             }
         </ul>
 
+        <app-epfind></app-epfind>
     </main>
 </div>
