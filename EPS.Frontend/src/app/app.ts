@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Page } from './components/core/layout/page/page';
+import { Shell } from './core/layout/shell/shell';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [Page],
+  imports: [Shell],
 })
 export class App {}

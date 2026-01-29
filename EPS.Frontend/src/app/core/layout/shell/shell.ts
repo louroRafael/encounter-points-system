@@ -5,17 +5,17 @@ import { EpFind } from '../../../features/ep-find/ep-find';
 import { Faq } from '../../../features/faq/faq';
 
 @Component({
-  selector: 'app-page',
+  selector: 'app-shell',
   imports: [
     CommonModule,
     Menu,
     EpFind,
     Faq
   ],
-  templateUrl: './page.html',
-  styleUrl: './page.css',
+  templateUrl: './shell.html',
+  styleUrl: './shell.css',
 })
-export class Page implements OnInit {
+export class Shell implements OnInit {
   activeBg: string = 'futebol';
 
   epCategories = [

@@ -1,0 +1,36 @@
+<section id="ep-find" class="mx-auto px-4 mt-[2em] sm:px-10 lg:px-20 lg:mt-[18em] py-6">
+    <div class="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-4 items-center">
+
+        <div class="mt-20 lg:ml-20 flex flex-col items-start font-semibold tracking-tighter">
+            <h2 class="mb-3 md:mb-7 text-[clamp(1.6rem,3vw,2.4rem)] font-bold uppercase">Encounter Points<br/>Disponíveis</h2>
+            <div class="w-16 h-1 bg-white mt-4"></div>
+            <p class="mt-5 md:mt-10 text-[clamp(1.6rem,3vw,2.4rem)] uppercase">Participe!</p>
+
+            <div class="grid grid-cols-2 gap-4 mt-10 mx-auto md:mx-0">
+                @for (category of categories; track category.id) {
+                    <div class="flex flex-row justify-start items-center p-2 lg:p-6 mr-2 md:mr-10">
+                        <div class="flex-shrink-0 w-[12vw] sm:w-[10vw] md:w-[6vw] lg:w-[4vw] lg:mr-8">
+                            <app-ep-flag [color]="category.hexColor"></app-ep-flag>
+                        </div>
+                        <span class="text-[clamp(1rem,2vw,2rem)] whitespace-nowrap">{{category.name}}</span>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="relative flex flex-col items-center justify-center">
+            <img src="assets/images/mapa-curitiba.png" alt="Mapa de Curitiba" class="max-h-screen">
+
+            @for (ep of encounterPoints; track ep.id) {
+                <div class="absolute flex-shrink-0 w-[8vw] sm:w-[6vw] md:w-[4vw] lg:w-[3vw] lg:mr-8"
+                    [style.top.%]="ep.position.top"
+                    [style.left.%]="ep.position.left"
+                >
+                    <app-ep-flag [color]="ep.category?.hexColor"></app-ep-flag>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>

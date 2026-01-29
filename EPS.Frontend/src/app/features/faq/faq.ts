@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { FaqCard } from '../faq-card/faq-card';
-
+import { FaqCard } from './components/faq-card/faq-card';
 @Component({
   selector: 'app-faq',
   imports: [
