@@ -13,43 +13,43 @@ export const EP_CATEGORIES: EpCategory[] = [
 export const ENCOUNTER_POINTS: Ep[] = [
   {
     id: 1,
-    name: 'EP Futebol',
+    name: 'Futebol',
     categoryId: 1, // Esportes
     leader: 'João Silva',
     address: 'Quadra Central - Curitiba',
     startAt: new Date('2026-04-11T10:30:00'),
     position: {
       top: 46,
-      left: 21
+      left: 28
     }
   },
   {
     id: 2,
-    name: 'EP Volei',
-    categoryId: 1,
+    name: 'Volei',
+    categoryId: 1, // Esportes
     leader: 'Maria Santos',
     address: 'Top Sports',
     startAt: new Date('2026-04-11T20:00:00'),
     position: {
-      left: 34,
-      top: 26
+      top: 26,
+      left: 34
     }
   },
   {
     id: 3,
-    name: 'EP Catan',
-    categoryId: 2,
+    name: 'Catan',
+    categoryId: 2, // Boardgames
     leader: 'Gabriel Morais',
     address: 'Salão Festa - Ap Gabe',
     startAt: new Date('2026-04-11T18:00:00'),
     position: {
-      left: 35,
-      top: 75
+      top: 75,
+      left: 35
     }
   },
   {
     id: 4,
-    name: 'EP Futsal Noturno',
+    name: 'Futsal Noturno',
     categoryId: 1, // Esportes
     leader: 'Lucas Pereira',
     address: 'Ginásio Bairro Novo',
@@ -61,7 +61,7 @@ export const ENCOUNTER_POINTS: Ep[] = [
   },
   {
     id: 5,
-    name: 'EP FIFA 24',
+    name: 'FIFA 24',
     categoryId: 3, // Videogames
     leader: 'Rafael Costa',
     address: 'Arena Gamer Curitiba',
@@ -73,7 +73,7 @@ export const ENCOUNTER_POINTS: Ep[] = [
   },
   {
     id: 6,
-    name: 'EP League of Legends',
+    name: 'League of Legends',
     categoryId: 4, // E-Sports
     leader: 'André Lima',
     address: 'LAN House XP',
@@ -85,7 +85,7 @@ export const ENCOUNTER_POINTS: Ep[] = [
   },
   {
     id: 7,
-    name: 'EP Xadrez',
+    name: 'Xadrez',
     categoryId: 2, // Boardgames
     leader: 'Fernanda Rocha',
     address: 'Biblioteca Pública',
@@ -97,7 +97,7 @@ export const ENCOUNTER_POINTS: Ep[] = [
   },
   {
     id: 8,
-    name: 'EP DIY Marcenaria',
+    name: 'DIY Marcenaria',
     categoryId: 6, // DIY
     leader: 'Carlos Nogueira',
     address: 'Oficina Criativa',
@@ -109,7 +109,7 @@ export const ENCOUNTER_POINTS: Ep[] = [
   },
   {
     id: 9,
-    name: 'EP Valorant',
+    name: 'Valorant',
     categoryId: 4, // E-Sports
     leader: 'Bruno Alves',
     address: 'Gaming House Alpha',
@@ -121,7 +121,7 @@ export const ENCOUNTER_POINTS: Ep[] = [
   },
   {
     id: 10,
-    name: 'EP Jogos de Mesa',
+    name: 'Jogos de Mesa',
     categoryId: 5, // Lazer
     leader: 'Patrícia Gomes',
     address: 'Café Central',

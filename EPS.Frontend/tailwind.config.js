@@ -19,6 +19,15 @@ module.exports = {
           leisure: '#8800FF',
           diy: '#ED1E79'
         }
+      },
+      keyframes: {
+        pulseCircle: {
+          '0%': { transform: 'scale(0.6)', opacity: '0.3' },
+          '100%': { transform: 'scale(1.4)', opacity: '0' }
+        }
+      },
+      animation: {
+        'pulse-circle': 'pulseCircle 1.2s ease-out infinite'
       }
     }
   },

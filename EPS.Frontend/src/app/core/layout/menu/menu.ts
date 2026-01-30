@@ -15,10 +15,10 @@ export class Menu {
   isMenuOpen = false;
   menuItems = [
     { label: 'Home', ref: 'home' },
-    { label: 'O que é', ref: 'about' },
+    // { label: 'O que é', ref: 'about' },
     { label: 'Encontre o seu', ref: 'ep-find' },
     { label: 'FAQ', ref: 'faq' },
-    { label: 'Contato', ref: 'contact' }
+    // { label: 'Contato', ref: 'contact' }
   ];
 
   toggleMenu() {
