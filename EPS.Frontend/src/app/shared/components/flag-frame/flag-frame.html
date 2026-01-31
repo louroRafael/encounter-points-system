@@ -1,0 +1,23 @@
+<div class="relative mx-auto aspect-square group
+            w-full">
+    <svg viewBox="0 0 100 100" class="w-full h-full">
+        <defs>
+            <path id="flagShape" d="M6,35 L53,13 L54,27 L89,12 L82,38 L94,57 L37,84 L37,68 L6,83 L6,93 Z" />
+
+            <clipPath id="flagClip">
+                <use href="#flagShape" />
+            </clipPath>
+        </defs>
+
+        <image
+            [attr.xlink:href]="imageUrl"
+            x="0" y="0" 
+            width="100" height="100"
+            preserveAspectRatio="xMidYMid slice"
+            clip-path="url(#flagClip)"
+            class="transition-transform duration-700 ease-out origin-center group-hover:scale-105"
+        />
+
+        <use href="#flagShape" class="fill-none stroke-brand-primary" stroke-width="6" />
+    </svg>
+</div>

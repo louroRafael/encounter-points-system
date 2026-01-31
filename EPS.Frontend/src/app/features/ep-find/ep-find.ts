@@ -4,12 +4,14 @@ import { Ep } from '../../shared/models/encounter-point.model';
 import { EpService } from '../../core/services/ep';
 import { EpCategory } from '../../shared/models/ep-category.model';
 import { EpFlag } from '../../shared/components/ep-flag/ep-flag';
+import { FlagFrame } from '../../shared/components/flag-frame/flag-frame';
 
 @Component({
   selector: 'app-ep-find',
   imports: [
     DatePipe,
-    EpFlag
+    EpFlag,
+    FlagFrame
   ],
   templateUrl: './ep-find.html',
   styleUrl: './ep-find.css',

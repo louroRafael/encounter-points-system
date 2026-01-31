@@ -2,12 +2,12 @@ import { Ep } from "../models/encounter-point.model";
 import { EpCategory } from "../models/ep-category.model";
 
 export const EP_CATEGORIES: EpCategory[] = [
-    { id: 1, name: 'Esportes', hexColor: '#FF0000' },
-    { id: 2, name: 'Boardgames', hexColor: '#005CFF' },
-    { id: 3, name: 'Videogames', hexColor: '#00DD64' },
-    { id: 4, name: 'E-Sports', hexColor: '#FC7E00' },
-    { id: 5, name: 'Lazer', hexColor: '#8800FF' },
-    { id: 6, name: 'DIY', hexColor: '#ED1E79' },
+    { id: 1, name: 'Esportes', hexColor: '#FF0000', imageName: 'bg-futebol' },
+    { id: 2, name: 'Boardgames', hexColor: '#005CFF', imageName: 'bg-boardgame' },
+    { id: 3, name: 'Videogames', hexColor: '#00DD64', imageName: 'bg-videogame' },
+    { id: 4, name: 'E-Sports', hexColor: '#FC7E00', imageName: 'bg-esports' },
+    { id: 5, name: 'Lazer', hexColor: '#8800FF', imageName: 'bg-leisure' },
+    { id: 6, name: 'DIY', hexColor: '#ED1E79', imageName: 'bg-diy' },
 ];
 
 export const ENCOUNTER_POINTS: Ep[] = [

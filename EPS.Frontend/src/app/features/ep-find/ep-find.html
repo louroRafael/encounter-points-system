@@ -1,17 +1,17 @@
-<section id="ep-find" class="mx-auto px-4 mt-[2em] sm:px-10 lg:px-20 lg:mt-[18em] py-6">
-    <div class="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-4 items-center">
+<section id="ep-find" class="mx-auto py-6">
+    <div class="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-4 items-center mt-[5vh]">
 
-        <div class="mt-20 lg:ml-20 flex flex-col items-start font-semibold tracking-tighter">
+        <div class="mx-auto flex flex-col items-start font-semibold tracking-tighter">
             <h2 class="mb-3 md:mb-7 text-[clamp(1.6rem,3vw,2.4rem)] font-bold uppercase">Encounter Points<br/>Disponíveis</h2>
             <div class="w-16 h-2 bg-white mt-4"></div>
             <p class="mt-5 md:mt-10 text-[clamp(1.6rem,3vw,2.4rem)] uppercase">Participe!</p>
 
             <div class="grid grid-cols-2 gap-4 mt-10 mx-auto md:mx-0">
                 @for (category of categories; track category.id) {
-                    <div class="flex flex-row justify-start items-center p-2 lg:p-6 mr-2 md:mr-10">
-                        <div class="relative cursor-pointer flex-shrink-0 w-[12vw] sm:w-[10vw] md:w-[6vw] lg:w-[4vw] lg:mr-8 aspect-square"
-                            (click)="filterCategory(category.id)"
-                        >
+                    <div class="cursor-pointer flex flex-row justify-start items-center p-2 lg:p-6 mr-2 md:mr-10"
+                        (click)="filterCategory(category.id)"
+                    >
+                        <div class="relative flex-shrink-0 w-[12vw] sm:w-[10vw] md:w-[6vw] lg:w-[4vw] mr-1 aspect-square">
                             <app-ep-flag class="relative z-10" [color]="category.hexColor"></app-ep-flag>
                             <!-- Efeito Seleção -->
                             @if (activeCategory === category.id) {
@@ -26,7 +26,7 @@
         </div>
 
         <!-- Mapa -->
-        <div class="relative flex flex-col items-center justify-center">
+        <div class="relative flex flex-col items-center justify-center w-[90vw] md:w-[45vw]">
             <img src="assets/images/mapa-curitiba.png" alt="Mapa de Curitiba" class="max-h-screen">
 
             @for (ep of encounterPoints; track ep.id) {
@@ -44,32 +44,38 @@
         </div>
     </div>
 
+    <!-- Detalhes EP -->
+
     @if (activeEp != null) {
-        <div class="grid grid-cols-1 md:grid-cold[0.8fr,1.2fr] gap-4 items-center w-screen mt-[2em] lg:mt-[12em]">
-            <div class="mx-auto md:mx-0">
-                <h1 class="text-brand-primary text-[clamp(2rem,8vw,6rem)] leading-[0.9] font-bold tracking-tighter uppercase">
+        <div class="grid grid-cols-1 md:grid-cols-[auto_1.2fr]
+                    mt-[5vh] md:gap-4 items-center mx-auto">
+            <div class="flex flex-col w-[90vw] md:w-auto">
+                <h1 class="text-brand-primary text-[clamp(2rem,5vw,6rem)] leading-[0.9] font-bold tracking-tighter uppercase">
                     Ep<br/>{{ activeEp.name }}
                 </h1>
 
                 <div class="w-16 h-2 bg-white my-3 md:my-10"></div>
 
-                <h2 class="text-[clamp(2rem,8vw,6rem)] leading-[0.9] tracking-tighter uppercase">
+                <h2 class="text-[clamp(2rem,5vw,6rem)] leading-[0.9] tracking-tighter uppercase">
                     {{ getWeekDay(activeEp.startAt) }}
                 </h2>
 
                 <div class="flex flex-row justify-start items-center">
-                    <h2 class="text-[clamp(2rem,8vw,6rem)] leading-[0.9] tracking-tighter uppercase">
+                    <h2 class="text-[clamp(2rem,5vw,6rem)] leading-[0.9] tracking-tighter uppercase">
                         {{ (activeEp.startAt | date:'dd MMM')!.replace('.', '') }}
                     </h2>
 
-                    <div class="bg-white h-[1.2vw] lg:h-[0.9vw] aspect-square rounded-full mx-10"></div>
+                    <div class="bg-white h-[1.2vw] lg:h-[0.9vw] aspect-square rounded-full mx-5"></div>
 
-                    <h2 class="text-[clamp(2rem,8vw,6rem)] leading-[0.9] tracking-tighter uppercase">
+                    <h2 class="text-[clamp(2rem,5vw,6rem)] leading-[0.9] tracking-tighter uppercase">
                         {{ (activeEp.startAt | date:'HH:mm')!.replace(':', 'H') }}
                     </h2>
                 </div>
             </div>
-            <div></div>
+
+            <div class="w-full flex items-center">
+                <app-flag-frame [imageName]="activeEp.category?.imageName"></app-flag-frame>
+            </div>
         </div>
     }
     

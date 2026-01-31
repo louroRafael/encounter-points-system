@@ -20,6 +20,9 @@ module.exports = {
           diy: '#ED1E79'
         }
       },
+      fontFamily: {
+        sans: ['"DM Sans"', 'ui-sans-serif', 'system-ui'],
+      },
       keyframes: {
         pulseCircle: {
           '0%': { transform: 'scale(0.6)', opacity: '0.3' },
