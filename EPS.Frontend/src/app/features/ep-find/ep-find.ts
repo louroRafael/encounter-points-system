@@ -34,10 +34,24 @@ export class EpFind implements OnInit {
   }
 
   selectEp(ep: Ep): void {
-    this.activeEp = (ep === this.activeEp) ? null : ep;
+    if (ep === this.activeEp) {
+      this.activeEp = null;
+    }
+    else {
+      this.activeEp = ep;
+
+      setTimeout(() => {
+        this.scrollTo("ep-details");
+      });
+    }
   }
 
   getWeekDay(date: Date): string {
     return new Intl.DateTimeFormat('pt-BR', { weekday: 'long' }).format(date);
+  }
+
+  scrollTo(ref: string) {
+    const el = document.getElementById(ref);
+    el?.scrollIntoView({ behavior: 'smooth' });
   }
 }

@@ -26,18 +26,18 @@
         </div>
 
         <!-- Mapa -->
-        <div class="relative flex flex-col items-center justify-center w-[90vw] md:w-[45vw]">
+        <div class="relative flex flex-col items-center justify-center w-full">
             <img src="assets/images/mapa-curitiba.png" alt="Mapa de Curitiba" class="max-h-screen">
 
             @for (ep of encounterPoints; track ep.id) {
                 @if(activeCategory === null || activeCategory === ep.categoryId) {
-                    <div class="cursor-pointer absolute flex-shrink-0 w-[8vw] sm:w-[6vw] md:w-[4vw] lg:w-[3vw] lg:mr-8"
+                    <a class="cursor-pointer absolute flex-shrink-0 w-[8vw] sm:w-[6vw] md:w-[4vw] lg:w-[3vw] lg:mr-8"
                         [style.top.%]="ep.position.top"
                         [style.left.%]="ep.position.left"
                         (click)="selectEp(ep)"
                     >
                         <app-ep-flag [color]="ep.category?.hexColor"></app-ep-flag>
-                    </div>
+                    </a>
                 }
             }
 
@@ -47,7 +47,7 @@
     <!-- Detalhes EP -->
 
     @if (activeEp != null) {
-        <div class="grid grid-cols-1 md:grid-cols-[auto_1.2fr]
+        <div id="ep-details" class="grid grid-cols-1 md:grid-cols-[auto_1.2fr]
                     mt-[5vh] md:gap-4 items-center mx-auto">
             <div class="flex flex-col w-[90vw] md:w-auto">
                 <h1 class="text-brand-primary text-[clamp(2rem,5vw,6rem)] leading-[0.9] font-bold tracking-tighter uppercase">
