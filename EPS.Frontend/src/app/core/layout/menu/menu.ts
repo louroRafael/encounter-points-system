@@ -15,8 +15,9 @@ export class Menu {
   isMenuOpen = false;
   menuItems = [
     { label: 'Home', ref: 'home' },
-    // { label: 'O que é', ref: 'about' },
-    { label: 'Encontre o seu', ref: 'ep-find' },
+    { label: 'O que é', ref: 'what-is' },
+    { label: 'Encontre o seu', ref: 'eps-library' },
+    { label: 'Onde estamos', ref: 'ep-find' },
     { label: 'FAQ', ref: 'faq' },
     // { label: 'Contato', ref: 'contact' }
   ];
