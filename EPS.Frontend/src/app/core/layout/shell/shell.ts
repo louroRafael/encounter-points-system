@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { Menu } from '../menu/menu';
 import { EpFind } from '../../../features/ep-find/ep-find';
 import { Faq } from '../../../features/faq/faq';
+import { WhatIs } from "../../../features/what-is/what-is";
+import { EpsLibrary } from "../../../features/eps-library/eps-library";
 
 @Component({
   selector: 'app-shell',
@@ -10,8 +12,10 @@ import { Faq } from '../../../features/faq/faq';
     CommonModule,
     Menu,
     EpFind,
-    Faq
-  ],
+    Faq,
+    WhatIs,
+    EpsLibrary
+],
   templateUrl: './shell.html',
   styleUrl: './shell.css',
 })
