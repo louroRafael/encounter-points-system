@@ -3,11 +3,8 @@ import { EpCategory } from "../models/ep-category.model";
 
 export const EP_CATEGORIES: EpCategory[] = [
     { id: 1, name: 'Esportes', hexColor: '#FF0000', imageName: 'bg-futebol' },
-    { id: 2, name: 'Boardgames', hexColor: '#005CFF', imageName: 'bg-boardgame' },
-    { id: 3, name: 'Videogames', hexColor: '#00DD64', imageName: 'bg-videogame' },
-    { id: 4, name: 'E-Sports', hexColor: '#FC7E00', imageName: 'bg-esports' },
-    { id: 5, name: 'Lazer', hexColor: '#8800FF', imageName: 'bg-leisure' },
-    { id: 6, name: 'DIY', hexColor: '#ED1E79', imageName: 'bg-diy' },
+    { id: 2, name: 'Games', hexColor: '#005CFF', imageName: 'bg-boardgame' },
+    { id: 3, name: 'Outros', hexColor: '#00DD64', imageName: 'bg-videogame' }
 ];
 
 export const ENCOUNTER_POINTS: Ep[] = [
@@ -17,6 +14,7 @@ export const ENCOUNTER_POINTS: Ep[] = [
     categoryId: 1, // Esportes
     leader: 'João Silva',
     address: 'Quadra Central - Curitiba',
+    imageName: 'bg-futebol',
     startAt: new Date('2026-04-11T10:30:00'),
     position: {
       top: 46,
@@ -29,6 +27,7 @@ export const ENCOUNTER_POINTS: Ep[] = [
     categoryId: 1, // Esportes
     leader: 'Maria Santos',
     address: 'Top Sports',
+    imageName: 'bg-volei',
     startAt: new Date('2026-04-11T20:00:00'),
     position: {
       top: 26,
@@ -38,9 +37,10 @@ export const ENCOUNTER_POINTS: Ep[] = [
   {
     id: 3,
     name: 'Catan',
-    categoryId: 2, // Boardgames
+    categoryId: 2, // Games
     leader: 'Gabriel Morais',
     address: 'Salão Festa - Ap Gabe',
+    imageName: 'bg-boardgame',
     startAt: new Date('2026-04-11T18:00:00'),
     position: {
       top: 75,
@@ -53,6 +53,7 @@ export const ENCOUNTER_POINTS: Ep[] = [
     categoryId: 1, // Esportes
     leader: 'Lucas Pereira',
     address: 'Ginásio Bairro Novo',
+    imageName: 'bg-futebol',
     startAt: new Date('2026-04-12T21:00:00'),
     position: {
       top: 58,
@@ -62,9 +63,10 @@ export const ENCOUNTER_POINTS: Ep[] = [
   {
     id: 5,
     name: 'FIFA 24',
-    categoryId: 3, // Videogames
+    categoryId: 2, // Games
     leader: 'Rafael Costa',
     address: 'Arena Gamer Curitiba',
+    imageName: 'bg-videogame',
     startAt: new Date('2026-04-13T19:30:00'),
     position: {
       top: 40,
@@ -74,9 +76,10 @@ export const ENCOUNTER_POINTS: Ep[] = [
   {
     id: 6,
     name: 'League of Legends',
-    categoryId: 4, // E-Sports
+    categoryId: 2, // Games
     leader: 'André Lima',
     address: 'LAN House XP',
+    imageName: 'bg-esports',
     startAt: new Date('2026-04-14T20:00:00'),
     position: {
       top: 33,
@@ -86,9 +89,10 @@ export const ENCOUNTER_POINTS: Ep[] = [
   {
     id: 7,
     name: 'Xadrez',
-    categoryId: 2, // Boardgames
+    categoryId: 2, // Games
     leader: 'Fernanda Rocha',
     address: 'Biblioteca Pública',
+    imageName: 'bg-boardgame',
     startAt: new Date('2026-04-15T17:00:00'),
     position: {
       top: 22,
@@ -98,9 +102,10 @@ export const ENCOUNTER_POINTS: Ep[] = [
   {
     id: 8,
     name: 'DIY Marcenaria',
-    categoryId: 6, // DIY
+    categoryId: 3, // Outros
     leader: 'Carlos Nogueira',
     address: 'Oficina Criativa',
+    imageName: 'bg-leisure',
     startAt: new Date('2026-04-16T14:00:00'),
     position: {
       top: 60,
@@ -110,9 +115,10 @@ export const ENCOUNTER_POINTS: Ep[] = [
   {
     id: 9,
     name: 'Valorant',
-    categoryId: 4, // E-Sports
+    categoryId: 2, // Games
     leader: 'Bruno Alves',
     address: 'Gaming House Alpha',
+    imageName: 'bg-esports',
     startAt: new Date('2026-04-16T22:00:00'),
     position: {
       top: 47,
@@ -121,10 +127,11 @@ export const ENCOUNTER_POINTS: Ep[] = [
   },
   {
     id: 10,
-    name: 'Jogos de Mesa',
-    categoryId: 5, // Lazer
+    name: 'Cerâmica Fria',
+    categoryId: 3, // Outros
     leader: 'Patrícia Gomes',
     address: 'Café Central',
+    imageName: 'bg-leisure',
     startAt: new Date('2026-04-17T16:00:00'),
     position: {
       top: 72,

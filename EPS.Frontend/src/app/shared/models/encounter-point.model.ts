@@ -7,6 +7,7 @@ export interface Ep {
   category?: EpCategory;
   leader: string;
   address: string;
+  imageName: string;
   startAt: Date;
   position: {
     left: number;

@@ -1,0 +1,14 @@
+<div class="flex w-[350px] group relative rounded-lg overflow-hidden">
+  
+  <img
+    [src]="'assets/images/' + ep.imageName + '.jpg'"
+    class="w-full h-[280px] object-cover transition-transform duration-300 group-hover:scale-105"
+  />
+
+  <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
+
+  <div class="absolute bottom-2 left-2 text-white text-sm font-semibold">
+    {{ ep.name }}
+  </div>
+
+</div>

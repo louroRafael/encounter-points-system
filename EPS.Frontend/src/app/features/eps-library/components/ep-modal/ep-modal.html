@@ -1,0 +1,42 @@
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4" (click)="close()">
+    <div class="relative bg-(--bg-contrast) rounded-[32px] w-fit max-w-3xl border border-white/10" (click)="$event.stopPropagation()">
+        
+        <div class="h-64 w-full relative">
+            <img [src]="'assets/images/' + ep.imageName + '.jpg'" class="w-full h-full object-cover rounded-t-[32px]" [alt]="ep.name">
+            <div class="absolute inset-0 bg-gradient-to-t from-(--bg-contrast) to-transparent"></div>
+        </div>
+
+        <button class="absolute top-6 right-6 text-black/80 hover:text-brand-primary" (click)="close()">
+            <i class="material-symbols-outlined">close</i>
+        </button>
+
+        <div class="flex flex-col h-full">
+            <div class="flex flex-col gap-4 p-10">
+                <h2 class="text-brand-primary text-[clamp(2rem,5vw,6rem)] leading-[0.9] font-bold tracking-tighter uppercase">
+                    EP {{ ep.name }}
+                </h2>
+                <p class="text-[clamp(1.5rem,4vw,5rem)] text-white leading-none">
+                    {{ ep.address }}
+                </p>
+
+                <div class="w-16 h-2 bg-white my-3 md:my-10"></div>
+
+                <h2 class="text-[clamp(1.5rem,4vw,5rem)] leading-[0.9] tracking-tighter uppercase"> sábado </h2>
+
+                <div class="flex flex-row justify-start items-center">
+                    <h2 class="text-[clamp(1.5rem,4vw,5rem)] leading-[0.9] tracking-tighter uppercase">
+                        11 abr
+                    </h2>
+                    <div class="bg-white h-[1.2vw] lg:h-[0.9vw] aspect-square rounded-full mx-5"></div>
+                    <h2 class="text-[clamp(1.5rem,4vw,5rem)] leading-[0.9] tracking-tighter uppercase">
+                        10H30
+                    </h2>
+                </div>
+            </div>
+
+            <button class="bg-brand-primary text-brand-background text-[clamp(1.2rem,3vw,4rem)] uppercase font-bold h-20 rounded-b-[32px]">
+                Inscreva-se
+            </button>
+        </div>
+    </div>
+</div>
