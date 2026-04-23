@@ -10,133 +10,224 @@ export const EP_CATEGORIES: EpCategory[] = [
 export const ENCOUNTER_POINTS: Ep[] = [
   {
     id: 1,
-    name: 'Futebol',
-    categoryId: 1, // Esportes
-    leader: 'João Silva',
-    address: 'Quadra Central - Curitiba',
-    imageName: 'bg-futebol',
-    startAt: new Date('2026-04-11T10:30:00'),
+    name: 'DIY',
+    categoryId: 3, // Outros
+    leader: 'Julia Ortencio',
+    address: 'Uberaba',
+    imageName: 'bg-diy',
+    startAt: new Date('2026-04-25T14:30:00'),
     position: {
-      top: 46,
-      left: 28
+      top: 38,
+      left: 79
     }
   },
   {
     id: 2,
-    name: 'Volei',
+    name: 'Airsoft',
     categoryId: 1, // Esportes
-    leader: 'Maria Santos',
-    address: 'Top Sports',
-    imageName: 'bg-volei',
-    startAt: new Date('2026-04-11T20:00:00'),
+    leader: 'Bruno Guimarães',
+    address: 'Jardim das Américas',
+    imageName: 'bg-airsoft',
+    startAt: new Date('2026-04-25T18:30:00'),
     position: {
-      top: 26,
-      left: 34
+      top: 30,
+      left: 75
     }
   },
   {
     id: 3,
-    name: 'Catan',
-    categoryId: 2, // Games
-    leader: 'Gabriel Morais',
-    address: 'Salão Festa - Ap Gabe',
-    imageName: 'bg-boardgame',
-    startAt: new Date('2026-04-11T18:00:00'),
+    name: 'Gastronomia',
+    categoryId: 3, // Outros
+    leader: "Luymara Sant'ana",
+    address: 'Batel',
+    imageName: 'bg-gastronomia',
+    startAt: new Date('2026-04-25T10:00:00'),
     position: {
-      top: 75,
-      left: 35
+      top: 26,
+      left: 47
     }
   },
   {
     id: 4,
-    name: 'Futsal Noturno',
+    name: 'Volei Quadra',
     categoryId: 1, // Esportes
-    leader: 'Lucas Pereira',
-    address: 'Ginásio Bairro Novo',
-    imageName: 'bg-futebol',
-    startAt: new Date('2026-04-12T21:00:00'),
+    leader: 'Pedro Vilas Boas',
+    address: 'Top Sports - Portão',
+    imageName: 'bg-volei',
+    startAt: new Date('2026-04-25T11:00:00'),
     position: {
-      top: 58,
-      left: 38
+      top: 42,
+      left: 44
     }
   },
   {
     id: 5,
-    name: 'FIFA 24',
-    categoryId: 2, // Games
-    leader: 'Rafael Costa',
-    address: 'Arena Gamer Curitiba',
-    imageName: 'bg-videogame',
-    startAt: new Date('2026-04-13T19:30:00'),
+    name: 'Volei Areia',
+    categoryId: 1, // Esportes
+    leader: 'Pedro Vilas Boas',
+    address: 'FTM - Novo Mundo',
+    imageName: 'bg-volei',
+    startAt: new Date('2026-04-15T14:00:00'),
     position: {
-      top: 40,
-      left: 52
+      top: 48,
+      left: 42
     }
   },
   {
     id: 6,
-    name: 'League of Legends',
+    name: 'Boardgames',
     categoryId: 2, // Games
-    leader: 'André Lima',
-    address: 'LAN House XP',
-    imageName: 'bg-esports',
-    startAt: new Date('2026-04-14T20:00:00'),
+    leader: 'Gabriel Morais',
+    address: 'Espaço Vox - Novo Mundo',
+    imageName: 'bg-boardgame',
+    startAt: new Date('2026-04-25T16:00:00'),
     position: {
-      top: 33,
-      left: 60
+      top: 50,
+      left: 44
     }
   },
   {
     id: 7,
-    name: 'Xadrez',
-    categoryId: 2, // Games
-    leader: 'Fernanda Rocha',
-    address: 'Biblioteca Pública',
-    imageName: 'bg-boardgame',
-    startAt: new Date('2026-04-15T17:00:00'),
+    name: 'Futebol Sintético',
+    categoryId: 1, // Esportes
+    leader: 'Jhonata Santos',
+    address: 'Tá Voando Academy - Vila Izabel',
+    imageName: 'bg-futebol',
+    startAt: new Date('2026-04-25T16:00:00'),
     position: {
-      top: 22,
+      top: 38,
       left: 44
     }
   },
   {
     id: 8,
-    name: 'DIY Marcenaria',
-    categoryId: 3, // Outros
-    leader: 'Carlos Nogueira',
-    address: 'Oficina Criativa',
-    imageName: 'bg-leisure',
-    startAt: new Date('2026-04-16T14:00:00'),
+    name: 'Funcional',
+    categoryId: 1, // Esportes
+    leader: 'Thalissa Gorkawczuk',
+    address: 'Parque Barigui',
+    imageName: 'bg-funcional',
+    startAt: new Date('2026-04-25T09:30:00'),
     position: {
-      top: 60,
-      left: 48
+      top: 23,
+      left: 42
     }
   },
   {
     id: 9,
-    name: 'Valorant',
-    categoryId: 2, // Games
-    leader: 'Bruno Alves',
-    address: 'Gaming House Alpha',
-    imageName: 'bg-esports',
-    startAt: new Date('2026-04-16T22:00:00'),
+    name: 'Montanha - Anhangava',
+    categoryId: 3, // Outros
+    leader: 'Leonardo e Yasmin',
+    address: 'Piraquara',
+    imageName: 'bg-trilha',
+    startAt: new Date('2026-04-25T04:00:00'),
     position: {
-      top: 47,
-      left: 67
+      top: 36,
+      left: 96
     }
   },
   {
     id: 10,
-    name: 'Cerâmica Fria',
+    name: 'Montanha - Canal',
     categoryId: 3, // Outros
-    leader: 'Patrícia Gomes',
-    address: 'Café Central',
-    imageName: 'bg-leisure',
-    startAt: new Date('2026-04-17T16:00:00'),
+    leader: 'Larson e Pedro',
+    address: 'Piraquara',
+    imageName: 'bg-trilha',
+    startAt: new Date('2026-04-25T04:30:00'),
     position: {
-      top: 72,
+      top: 38,
+      left: 95
+    }
+  },
+  {
+    id: 11,
+    name: 'Montanha - Pão de Loth',
+    categoryId: 3, // Outros
+    leader: 'Gustavo e Nacélio',
+    address: 'Quatro Barras',
+    imageName: 'bg-trilha',
+    startAt: new Date('2026-04-25T07:30:00'),
+    position: {
+      top: 8,
+      left: 90
+    }
+  },
+  {
+    id: 12,
+    name: 'Café',
+    categoryId: 3, // Outros
+    leader: 'Felipe Braga',
+    address: 'Campo Comprido',
+    imageName: 'bg-cafe',
+    startAt: new Date('2026-04-25T09:00:00'),
+    position: {
+      top: 35,
+      left: 27
+    }
+  },
+  {
+    id: 13,
+    name: 'Corrida',
+    categoryId: 1, // Esportes
+    leader: 'Abraão',
+    address: 'Parque Barigui',
+    imageName: 'bg-corrida',
+    startAt: new Date('2026-04-25T16:30:00'),
+    position: {
+      top: 24,
+      left: 44
+    }
+  },
+  {
+    id: 14,
+    name: 'Skate',
+    categoryId: 1, // Esportes
+    leader: 'Vinicius Condo',
+    address: 'Pista Wenceslau',
+    imageName: 'bg-skate',
+    startAt: new Date('2026-04-25T14:30:00'),
+    position: {
+      top: 42,
+      left: 50
+    }
+  },
+  {
+    id: 15,
+    name: 'DIY',
+    categoryId: 3, // Outros
+    leader: 'Gabi Gambeta e Dana',
+    address: 'Parque Barigui',
+    imageName: 'bg-diy',
+    startAt: new Date('2026-04-25T09:00:00'),
+    position: {
+      top: 25,
+      left: 43
+    }
+  },
+  {
+    id: 16,
+    name: 'Futebol Sintético',
+    categoryId: 1, // Esportes
+    leader: 'Ramon Barros',
+    address: 'Alcance Santa Felicidade',
+    imageName: 'bg-futebol',
+    startAt: new Date('2026-04-25T15:00:00'),
+    position: {
+      top: 17,
+      left: 26
+    }
+  },
+  {
+    id: 17,
+    name: 'Basquete',
+    categoryId: 1, // Esportes
+    leader: 'Rafhael Barbosa',
+    address: 'Praça Abibe Isfer',
+    imageName: 'bg-basquete',
+    startAt: new Date('2026-04-25T09:00:00'),
+    position: {
+      top: 32,
       left: 49
     }
-  }
+  },
 ];
 
