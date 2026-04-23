@@ -24,15 +24,15 @@
 
                 <div class="w-16 h-2 bg-white my-3 md:my-10"></div>
 
-                <h2 class="text-[clamp(1.5rem,4vw,5rem)] leading-[0.9] tracking-tighter uppercase"> sábado </h2>
+                <h2 class="text-[clamp(1.5rem,4vw,5rem)] leading-[0.9] tracking-tighter uppercase"> {{ ep.startAt | date:'EEEE' }} </h2>
 
                 <div class="flex flex-row justify-start items-center">
                     <h2 class="text-[clamp(1.5rem,4vw,5rem)] leading-[0.9] tracking-tighter uppercase">
-                        11 abr
+                        {{ ep.startAt | date:'dd MMM' }}
                     </h2>
                     <div class="bg-white h-[1.2vw] lg:h-[0.9vw] aspect-square rounded-full mx-5"></div>
                     <h2 class="text-[clamp(1.5rem,4vw,5rem)] leading-[0.9] tracking-tighter uppercase">
-                        10H30
+                        {{ ep.startAt | date:'HH\'H\'mm' }}
                     </h2>
                 </div>
             </div>

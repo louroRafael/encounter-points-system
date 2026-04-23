@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Ep } from '../../../../shared/models/encounter-point.model';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-ep-modal',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './ep-modal.html',
   styleUrl: './ep-modal.css',
 })
